@@ -9,7 +9,7 @@ Resources:
       Type: 'Aliyun::Serverless::Function'
       Properties:
         Runtime: custom
-        CodeUri: ./ceshi
+        CodeUri: .
         Handler: bootstrap
       Events:
         httpTrigger:
