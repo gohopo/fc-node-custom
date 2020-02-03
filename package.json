@@ -1,0 +1,10 @@
+{
+  "name": "gohopo",
+  "version": "0.0.1",
+  "scripts": {
+    "start": "node dist/main"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
