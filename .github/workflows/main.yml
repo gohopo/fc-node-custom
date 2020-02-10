@@ -14,7 +14,9 @@ jobs:
           echo ${GITHUB_REF:11}
           
       - name: show github ref
-        run: echo ${{ github.ref }}
+        run: |
+          echo ${github.ref}
+          echo ${github.ref:10}
         
       - name: when dev
         if: endsWith(github.ref,'dev')
