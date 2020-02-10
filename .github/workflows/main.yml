@@ -1,7 +1,8 @@
 name: test actions
 on:
-  tags:
-    - '*'
+  push:
+    tags:
+      - '*'
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -17,8 +18,8 @@ jobs:
         
       - name: when dev
         run: echo publish dev
-        if: endsWith(GITHUB_REF,'dev')
+        if: endsWith($GITHUB_REF,'dev')
         
       - name: when prod
         run: echo publish prod
-        if: endsWith(GITHUB_REF,'prod')
+        if: endsWith($GITHUB_REF,'prod')
