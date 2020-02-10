@@ -20,7 +20,7 @@ jobs:
         run: ls ${GITHUB_REF:11}.nupkg
         
       - name: when dev
-        if: !(endsWith(github.ref,'dev'))
+        if: ! endsWith(github.ref,'dev')
         run: echo publish dev
         
       - name: when prod
