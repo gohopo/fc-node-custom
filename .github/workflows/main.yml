@@ -1,0 +1,15 @@
+name: publish to nuget
+on:
+  push:
+    tags:
+      - '*'
+jobs:
+  build-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: show GITHUB_REF
+        run: |
+          echo $GITHUB_REF
+          echo ${GITHUB_REF:10}
+      - name: show github ref
+        run: echo github.ref
