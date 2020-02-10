@@ -15,11 +15,3 @@ jobs:
           
       - name: show github ref
         run: echo $github.ref
-        
-      - name: when dev
-        run: echo publish dev
-        if: endsWith($GITHUB_REF,'dev')
-        
-      - name: when prod
-        run: echo publish prod
-        if: endsWith($GITHUB_REF,'prod')
