@@ -15,9 +15,6 @@ jobs:
           
       - name: show github ref
         run: echo ${{github.ref}}
-          
-      - name: show nupkg file
-        run: ls ${GITHUB_REF:11}.nupkg
         
       - name: when dev
         if: endsWith(github.ref,'dev') != true
