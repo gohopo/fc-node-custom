@@ -14,4 +14,12 @@ jobs:
           echo ${GITHUB_REF:11}
           
       - name: show github ref
-        run: echo $github.ref
+        run: echo ${{ github.ref }}
+        
+      - name: when dev
+        if: endsWith(github.ref,'dev')
+        run: echo publish dev
+        
+      - name: when prod
+        if: endsWith(github.ref,'prod')
+        run: echo publish prod
