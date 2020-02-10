@@ -1,8 +1,7 @@
 name: test actions
 on:
-  push:
-    tags:
-      - '*'
+  tags:
+    - '*'
 jobs:
   test:
     runs-on: ubuntu-latest
