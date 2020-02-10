@@ -15,8 +15,12 @@ jobs:
           
       - name: show github ref
         run: |
-          echo ${github.ref}
-          echo ${github.ref:10}
+          echo ${{github.ref}}
+          
+      - name: setup dotnet core
+        uses: actions/setup-dotnet@master
+        with:
+          dotnet-version: ${GITHUB_REF:11}
         
       - name: when dev
         if: endsWith(github.ref,'dev')
